@@ -8,7 +8,7 @@ export class Api {
 
     constructor(private http: HttpClient) { }
 
-    public baseUrl: string = 'http://sandbox.trails-end.com/';
+    public baseUrl: string = 'http://te-dev.trails-end.com/';
 
 
     get(endpoint: string, params?: any, reqOpts?: any) {

@@ -1,11 +1,25 @@
 <!--components/cdu/cdu.component-->
 
 <!-- Dropdown control to be used -->
-<!--<mat-form-field>-->
-    <!--<mat-select>-->
-        <!--<mat-option>-->
-            <!--//Target Full_Name-->
-        <!--</mat-option>-->
-    <!--</mat-select>-->
-<!--</mat-form-field>-->
+<mat-form-field class="dropDownField">
+    <mat-select (selectionChange)="onCouncilChange($event.value)" placeholder="Select Council">
+        <mat-option *ngFor="let council of councils" value="{{council.Party_Id}}" >
+            {{council.Full_Name}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<mat-form-field class="dropDownField">
+    <mat-select (selectionChange)="onDistrictChange($event.value)" placeholder="Select District">
+        <mat-option *ngFor="let district of districts" value="{{district.Party_Id}}" >
+            {{district.Full_Name}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+<mat-form-field class="dropDownField">
+    <mat-select (selectionChange)="fetchUnitId($event.value)" placeholder="Select Unit">
+        <mat-option *ngFor="let unit of units" value="{{unit.Party_Id}}" >
+            {{unit.Full_Name}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
 

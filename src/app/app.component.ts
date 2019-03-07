@@ -11,7 +11,6 @@ export class AppComponent {
     public selectedUnit: any;
 
     setSelectedUnit($event: any) {
-
         this.selectedUnit = $event
     }
 
